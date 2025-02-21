@@ -8,7 +8,7 @@ namespace MVVMFirma.Models.Entities.EntitiesForView
 {
     public class FakturaForAllView
     {
-
+        public int IdFaktury { get; set; }
         public string NrFaktury { get; set; }
         public DateTime? DataWystawienia { get; set; }
         public string ProduktyUslugiNazwa { get; set; }

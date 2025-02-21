@@ -8,6 +8,7 @@ namespace MVVMFirma.Models.Entities.EntitiesForView
 {
     public class ProjektyForAllView
     {
+        public int IdProjektu {  get; set; }
         public string UzytkownicyImie { get; set; }
         public string UzytkownicyNazwisko { get; set; }
         public string KlienciNazwaFirmy { get; set; }

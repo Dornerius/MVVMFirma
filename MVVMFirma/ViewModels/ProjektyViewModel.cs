@@ -75,6 +75,7 @@ namespace MVVMFirma.ViewModels
                     from projekty in bazaCRMEntities.Projekty
                     select new ProjektyForAllView
                     {
+                        IdProjektu = projekty.IdProjektu,
                         UzytkownicyImie = projekty.Uzytkownicy.Imie,
                         UzytkownicyNazwisko = projekty.Uzytkownicy.Nazwisko,
                         KlienciNazwaFirmy = projekty.Klienci1.NazwaFirmy,                        

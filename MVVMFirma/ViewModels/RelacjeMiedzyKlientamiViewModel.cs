@@ -55,6 +55,7 @@ namespace MVVMFirma.ViewModels
                         
                     select new RelacjeMiedzyKlientamiForAllView
                     {
+                        IdRelacjiPomiedzyKlientami = relacjeMiedzyKlientami.IdRelacjiPomiedzyKlientami,
                         KlienciNazwaFirmy = relacjeMiedzyKlientami.Klienci.NazwaFirmy,
                         Klienci1NazwaFirmy = relacjeMiedzyKlientami.Klienci1.NazwaFirmy,
                         OpisRelacji = relacjeMiedzyKlientami.OpisRelacji

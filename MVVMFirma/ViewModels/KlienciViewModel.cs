@@ -153,6 +153,7 @@ namespace MVVMFirma.ViewModels
                     from klienci in bazaCRMEntities.Klienci
                     select new KlienciForAllView
                     {
+                        IdKlienta = klienci.IdKlienta,
                         NazwaFirmy = klienci.NazwaFirmy,
                         OsobowoscPrawna = klienci.OsobowoscPrawna,
                         Email = klienci.Email,

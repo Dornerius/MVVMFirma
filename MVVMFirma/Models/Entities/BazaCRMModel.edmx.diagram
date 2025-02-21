@@ -15,7 +15,6 @@
         <EntityTypeShape EntityType="BazaCRMModel.RodzajePlatnosci" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.StatusFaktury" Width="1.5" PointX="8.25" PointY="22.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.Statusy" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="BazaCRMModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.Szkolenia" Width="1.5" PointX="11.25" PointY="18.125" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.Transakcje" Width="1.5" PointX="13.5" PointY="9.875" IsExpanded="true" />
         <EntityTypeShape EntityType="BazaCRMModel.TypyInterakcji" Width="1.5" PointX="11.25" PointY="7.5" IsExpanded="true" />
@@ -62,6 +61,7 @@
         <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Zadania" ManuallyRouted="false" />
         <AssociationConnector Association="BazaCRMModel.FK_Klienci_Zespoly" />
         <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Klienci1" />
+        <EntityTypeShape EntityType="BazaCRMModel.sysdiagrams" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

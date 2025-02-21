@@ -361,6 +361,12 @@
     <Compile Include="Models\Entities\RodzajePlatnosci.cs">
       <DependentUpon>BazaCRMModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entities\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>BazaCRMModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Entities\sp_helpdiagrams_Result.cs">
+      <DependentUpon>BazaCRMModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entities\StatusFaktury.cs">
       <DependentUpon>BazaCRMModel.tt</DependentUpon>
     </Compile>

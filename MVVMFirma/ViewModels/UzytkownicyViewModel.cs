@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Collections.ObjectModel;
-using MVVMFirma.Models.Entities;
-using MVVMFirma.Helper;
-using System.Windows.Input;
 using MVVMFirma.Models.Entities.EntitiesForView;
+using MVVMFirma.Models.Entities;
+using GalaSoft.MvvmLight.Messaging;
+using System.Collections.Generic;
 
 namespace MVVMFirma.ViewModels
 {
@@ -19,24 +16,22 @@ namespace MVVMFirma.ViewModels
             : base("Użytkownicy")
         { }
 
-        public override void Load() => List = new ObservableCollection<UzytkownicyAllForView>
-                (
-                    from uzytkownicy in bazaCRMEntities.Uzytkownicy
-                    select new UzytkownicyAllForView
-                    {
-                        Imie = uzytkownicy.Imie,
-                        Nazwisko = uzytkownicy.Nazwisko,
-                        Email = uzytkownicy.Email,
-                        Telefon = uzytkownicy.Telefon,
-                        Rola = uzytkownicy.Rola,
-                        ZespolyNazwa = uzytkownicy.Zespoly.Nazwa,
-                        ZadaniaNazwa = uzytkownicy.Zadania.NazwaZadania,
-                        ProjektyNazwaProjektu = uzytkownicy.Projekty1.NazwaProjektu,
-                        KlienciNazwaFirmy = uzytkownicy.Klienci1.NazwaFirmy,                        
-                        SzkoleniaNazwa = uzytkownicy.Szkolenia.Nazwa
-                    }
-                );
-
+        #endregion
+        #region Properties
+        private UzytkownicyAllForView _WybraniUzytkownicy;
+        public UzytkownicyAllForView WybraniUzytkownicy
+        {
+            get
+            {
+                return _WybraniUzytkownicy;
+            }
+            set
+            {
+                _WybraniUzytkownicy = value;
+                Messenger.Default.Send(_WybraniUzytkownicy);
+                OnRequestClose();
+            }
+        }
         #endregion
         #region Sort and find
         public override List<string> GetComboBoxSortList()
@@ -94,6 +89,30 @@ namespace MVVMFirma.ViewModels
                 List = new ObservableCollection<UzytkownicyAllForView>(List.Where(item => item.KlienciNazwaFirmy != null && item.KlienciNazwaFirmy.StartsWith(FindTextBox)));
             if (FindField == "Szkolenie")
                 List = new ObservableCollection<UzytkownicyAllForView>(List.Where(item => item.SzkoleniaNazwa != null && item.SzkoleniaNazwa.StartsWith(FindTextBox)));
+        }
+
+        #endregion
+        #region Helpers
+        public override void Load()
+        {
+            List = new ObservableCollection<UzytkownicyAllForView>
+                (
+                    from uzytkownicy in bazaCRMEntities.Uzytkownicy
+                    select new UzytkownicyAllForView
+                    {
+                        IdUzytkownika = uzytkownicy.IdUzytkownika,
+                        Imie = uzytkownicy.Imie,
+                        Nazwisko = uzytkownicy.Nazwisko,
+                        Email = uzytkownicy.Email,
+                        Telefon = uzytkownicy.Telefon,
+                        Rola = uzytkownicy.Rola,
+                        ZespolyNazwa = uzytkownicy.Zespoly.Nazwa,
+                        ZadaniaNazwa = uzytkownicy.Zadania.NazwaZadania,
+                        ProjektyNazwaProjektu = uzytkownicy.Projekty1.NazwaProjektu,
+                        KlienciNazwaFirmy = uzytkownicy.Klienci1.NazwaFirmy,
+                        SzkoleniaNazwa = uzytkownicy.Szkolenia.Nazwa
+                    }
+                );
         }
 
         #endregion

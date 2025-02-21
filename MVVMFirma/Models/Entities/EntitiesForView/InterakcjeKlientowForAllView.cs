@@ -8,6 +8,7 @@ namespace MVVMFirma.Models.Entities.EntitiesForView
 {
     public class InterakcjeKlientowForAllView
     {
+        public int IdInterakcji { get; set; }
         public string KlienciNazwaFirmy { get; set; }
         public string TypyInterakcjiNazwaTypuInterakcji { get; set; }
         public DateTime? Data { get; set; }

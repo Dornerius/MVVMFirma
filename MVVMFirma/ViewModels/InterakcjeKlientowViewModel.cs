@@ -64,6 +64,7 @@ namespace MVVMFirma.ViewModels
                     from interakcjeKlientow in bazaCRMEntities.InterakcjeKlientow
                     select new InterakcjeKlientowForAllView
                     {
+                        IdInterakcji = interakcjeKlientow.IdInerakcji,
                         KlienciNazwaFirmy = interakcjeKlientow.Klienci.NazwaFirmy,
                         TypyInterakcjiNazwaTypuInterakcji = interakcjeKlientow.TypyInterakcji.NazwaTypuInterakcji,
                         Data = interakcjeKlientow.Data,

@@ -15,27 +15,35 @@
         <TextBlock Grid.Row="0" Text="Dodaj Produkt" FontSize="24" FontWeight="Bold" Margin="4"/>
         <Grid Grid.Row="1" Background="AliceBlue" Margin="10,10,0,0" >
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="220"/>
         </Grid.ColumnDefinitions>
-        
-        
-       
-        <Label Grid.Row="1" Grid.Column="0" Content="Nazwa" BorderBrush="Black" BorderThickness="2" Background="BlueViolet" FontWeight="Bold" Width="120" Height="30"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=Nazwa, UpdateSourceTrigger=PropertyChanged}" Background="White" Margin="8,3,8,3" />
-        <Label Grid.Row="2" Grid.Column="0" Content="Cena" Background="BlueViolet" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Width="120" Height="40"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=Cena, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" />
-        <Label Grid.Row="3" Grid.Column="0" Content="Opis" Background="BlueViolet" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Width="120" Height="40"/>
-        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Path=Opis, UpdateSourceTrigger=PropertyChanged}" Background="AliceBlue" />
 
-    </Grid> 
+
+            <Label Grid.Column="0" Grid.Row="0" Content="Nazwa" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+            <Border CornerRadius="5" Grid.Column="0" Grid.Row="0" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+            <TextBox  Grid.Column="1" Grid.Row="0" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj nr faktury" Text="{Binding Path=Nazwa, UpdateSourceTrigger=PropertyChanged}"/>
+            <Border CornerRadius="5" Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+            <Label Grid.Column="0" Grid.Row="1" Content="Cena" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+            <Border CornerRadius="5" Grid.Column="0" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+            <TextBox  Grid.Column="1" Grid.Row="1" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj nr faktury" Text="{Binding Path=Cena, UpdateSourceTrigger=PropertyChanged}"/>
+            <Border CornerRadius="5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+            <Label Grid.Column="0" Grid.Row="2" Content="Nazwa Firmy" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+            <Border CornerRadius="5" Grid.Column="0" Grid.Row="2" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+            <TextBox  Grid.Column="1" Grid.Row="2" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj nr faktury" Text="{Binding Path=Opis, UpdateSourceTrigger=PropertyChanged}"/>
+            <Border CornerRadius="5" Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+
+
+
+
+        </Grid> 
     </Grid>
     
 </local:JedenViewBase>

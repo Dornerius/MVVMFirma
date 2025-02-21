@@ -22,7 +22,8 @@ namespace MVVMFirma.ViewModels
         {
             DisplayName = "Nowy klient";
             item = new Klienci();
-            Messenger.Default.Register<UzytkownicyAllForView>(this, getWybranyUzytkownik);
+            Messenger.Default.Register<UzytkownicyAllForView>(this, getWybraniUzytkownicy);
+
 
         }
         #endregion
@@ -104,7 +105,11 @@ namespace MVVMFirma.ViewModels
             }
         }
         public string UzytkownicyImie { get; set; }
+
         public string UzytkownicyNazwisko { get; set; }
+
+
+
         public int? IdZespolu
         {
             get
@@ -292,7 +297,7 @@ namespace MVVMFirma.ViewModels
         {
             get
             {
-                return new UzytkownikB(bazaCRMEntities).GetUzytkownikKeyAndValueItems();
+                return new UzytkownikB(bazaCRMEntities).GetUzytkownicyKeyAndValueItems();
             }
         }
         public IQueryable<KeyAndValue> ZespolyItems
@@ -309,9 +314,14 @@ namespace MVVMFirma.ViewModels
                 return new ProjektyB(bazaCRMEntities).GetProjektyKeyAndValueItems();
             }
         }
-        private void getWybranyUzytkownik(UzytkownicyAllForView uzytkownicy)
-        {
+        #endregion
 
+        #region Helpers
+
+        
+        private void getWybraniUzytkownicy(UzytkownicyAllForView uzytkownicy)
+        {
+            //IdUzytkownika = uzytkownicy.IdUzytkownika;
             UzytkownicyImie = uzytkownicy.Imie;
             UzytkownicyNazwisko = uzytkownicy.Nazwisko;
         }

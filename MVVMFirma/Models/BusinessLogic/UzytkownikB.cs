@@ -17,7 +17,7 @@ namespace MVVMFirma.Models.BusinessLogic
         }
         #endregion
         #region BusinessFunction
-        public IQueryable<KeyAndValue> GetUzytkownikKeyAndValueItems()
+        public IQueryable<KeyAndValue> GetUzytkownicyKeyAndValueItems()
         {
             return
                 (

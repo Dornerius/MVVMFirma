@@ -92,6 +92,7 @@ namespace MVVMFirma.ViewModels
                     from faktury in bazaCRMEntities.Faktury
                     select new FakturaForAllView
                     {
+                        IdFaktury = faktury.IdFaktury,
                         NrFaktury = faktury.NrFaktury,
                         DataWystawienia = faktury.DataWystawienia,
                         ProduktyUslugiNazwa = faktury.ProduktyUslugi.Nazwa,

@@ -16,6 +16,7 @@
         <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=WybranyKlient, Mode=TwoWay}">         
 
             <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdKlienta}"/>
                 <DataGridTextColumn Header="Nazwa firmy" Binding="{Binding NazwaFirmy}"/>
                 <DataGridTextColumn Header="Osobowość prawna" Binding="{Binding OsobowoscPrawna}"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>

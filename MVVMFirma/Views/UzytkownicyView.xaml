@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="White">
-        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}">
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=WybraniUzytkownicy, Mode=TwoWay}">
             <DataGrid.Resources>
                 <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}" TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Azure"/>
@@ -25,9 +25,9 @@
                 <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}"/>
                 <DataGridTextColumn Header="Rola" Binding="{Binding Rola}"/>
                 <DataGridTextColumn Header="Zespół" Binding="{Binding ZespolyNazwa}"/>
-                <DataGridTextColumn Header="Projekt" Binding="{Binding ProjektyNazwa}"/>
+                <DataGridTextColumn Header="Projekt" Binding="{Binding ProjektyNazwaProjektu}"/>
                 <DataGridTextColumn Header="Klient" Binding="{Binding KlienciNazwaFirmy}"/>
-                <DataGridTextColumn Header="Szkolenia" Binding="{Binding SzkoleniaNazawa}"/>
+                <DataGridTextColumn Header="Szkolenia" Binding="{Binding SzkoleniaNazwa}"/>
             </DataGrid.Columns>
 
         </DataGrid>

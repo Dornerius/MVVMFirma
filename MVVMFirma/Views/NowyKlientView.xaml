@@ -81,7 +81,7 @@
 
                             <Label Grid.Column="0" Grid.Row="1" Content="Imie" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
                             <Border CornerRadius="5" Grid.Column="0" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
-                            <TextBox  Grid.Column="1" Grid.Row="1" IsEnabled="False" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" Text="{Binding Path=UzytkownicyImie, UpdateSourceTrigger=PropertyChanged}" />
+                            <TextBox  Grid.Column="1" Grid.Row="1" IsEnabled="False" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" Text="{Binding Path=UzytkownicyImie, UpdateSourceTrigger=PropertyChanged}"/>
                             <Border CornerRadius="5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
                             <Label Grid.Column="2" Grid.Row="1" Content="Nazwisko" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
                             <Border CornerRadius="5" Grid.Column="2" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>

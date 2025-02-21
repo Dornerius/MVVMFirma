@@ -96,7 +96,7 @@ namespace MVVMFirma.ViewModels
         {
             get
             {
-                return new UzytkownikB(bazaCRMEntities).GetUzytkownikKeyAndValueItems();
+                return new UzytkownikB(bazaCRMEntities).GetUzytkownicyKeyAndValueItems();
             }
         }
 

@@ -465,8 +465,8 @@ namespace MVVMFirma.ViewModels
             }
             if (name == "KlienciAll")
                 ShowAllKlienci();
-
-
+            if (name == "UzytkownicyAll")
+                ShowAllUzytkownicy();
             #endregion
         }
     }

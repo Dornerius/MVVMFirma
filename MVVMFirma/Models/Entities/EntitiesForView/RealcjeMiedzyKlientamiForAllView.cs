@@ -9,6 +9,7 @@ namespace MVVMFirma.Models.Entities.EntitiesForView
     public class RelacjeMiedzyKlientamiForAllView
 
     {
+        public int IdRelacjiPomiedzyKlientami { get; set; }
         public string KlienciNazwaFirmy { get; set; }
         public string Klienci1NazwaFirmy { get; set; }
         public string OpisRelacji { get; set; }
