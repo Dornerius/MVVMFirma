@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="MVVMFirma.Views.RaportKlientowView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMFirma.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Width="600" HorizontalAlignment="Left">
+        <Grid Background="white">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Label Grid.Row="0" Content="Raport efektywności pracowników" FontSize="25" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="108"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="108"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="1" Grid.Column="0" Content="Data początkowa" Margin="3"/>
+                <DatePicker IsTodayHighlighted="True"  Grid.Row="1" Grid.Column="1" Width="180" HorizontalAlignment="Left"  Name="dataPoczatkowa" Margin="3" SelectedDate="{Binding DataOd}"/>
+                <Label Grid.Row="1" Grid.Column="2" Content="Data końcowa" Margin="3"/>
+                <DatePicker IsTodayHighlighted="True" Grid.Row="1" Grid.Column="3" Width="180"  HorizontalAlignment="Left"  Name="dataKoncowa" Margin="3" SelectedDate="{Binding DataDo}"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="108"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Pracownik" Margin="3"/>
+                <ComboBox Grid.Column="1" Name="Pracownik" HorizontalAlignment="Left" Width="250" Margin="3" ItemsSource="{Binding UzytkownikItems}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding IdUzytkownika, Mode=TwoWay}"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Button Name="Oblicz" Content="Oblicz" Width="120" Height="30" Margin="3" HorizontalAlignment="Left" Command="{Binding RaportCommand}"></Button>
+
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Content="Raport" Margin="3"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="odpowiedz" FontSize="20"  Width="400" Height="25" HorizontalAlignment="left" Text="{Binding IloscKlientow}" IsReadOnly="True" TextWrapping="Wrap"/>
+            </Grid>
+        </Grid>
+    </StackPanel>
+</UserControl>

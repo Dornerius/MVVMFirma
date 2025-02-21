@@ -1,0 +1,47 @@
+﻿<local:WszystkieViewBase
+             x:Class="MVVMFirma.Views.KlienciView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MVVMFirma.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Klienci" FontSize="24" FontWeight="Bold" Margin="4"/>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding List}" SelectedItem="{Binding Path=WybranyKlient, Mode=TwoWay}">         
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nazwa firmy" Binding="{Binding NazwaFirmy}"/>
+                <DataGridTextColumn Header="Osobowość prawna" Binding="{Binding OsobowoscPrawna}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}"/>
+                <DataGridTextColumn Header="Wojewodztwo" Binding="{Binding Wojewodztwo}"/>
+                <DataGridTextColumn Header="Kod pocztowy" Binding="{Binding KodPocztowy}"/>
+                <DataGridTextColumn Header="Powiat" Binding="{Binding Powiat}"/>
+                <DataGridTextColumn Header="Miejscowość" Binding="{Binding Miejscowosc}"/>
+                <DataGridTextColumn Header="Ulica" Binding="{Binding Ulica}"/>
+                <DataGridTextColumn Header="Numer domu" Binding="{Binding NrBudynku}"/>
+                <DataGridTextColumn Header="Numer lokalu" Binding="{Binding NrLokalu}"/>
+                <DataGridTextColumn Header="NIP" Binding="{Binding Nip}"/>
+                <DataGridTextColumn Header="REGON" Binding="{Binding Regon}"/>
+                <DataGridTextColumn Header="KRS" Binding="{Binding Krs}"/>
+                <DataGridTextColumn Header="Media Społecznościowe" Binding="{Binding MediaSpolecznosciowe}"/>
+                <DataGridTextColumn Header="Dodatkowe Informacje" Binding="{Binding DodatkoweInformacje}"/>
+                <DataGridTextColumn Header="Imię pracownika" Binding="{Binding UzytkownicyImie}"/>
+                <DataGridTextColumn Header="Nazwisko pracownika" Binding="{Binding UzytkownicyNazwisko}"/>
+                <DataGridTextColumn Header="Satnowisko pracownika" Binding="{Binding UzytkownicyRola}"/>
+                <DataGridTextColumn Header="Nazwa Zespołu" Binding="{Binding ZespolyNazwa}"/>
+                <DataGridTextColumn Header="Nazwa Projektu" Binding="{Binding ProjektyNazwa}"/>
+
+            </DataGrid.Columns>
+            
+        </DataGrid>
+        
+            
+    </Grid>
+</local:WszystkieViewBase>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ae36803cdd3d45368c1c0e39c8e6e131" Name="Diagram1" ZoomLevel="110">
+        <EntityTypeShape EntityType="BazaCRMModel.Faktury" Width="1.5" PointX="10.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.InterakcjeKlientow" Width="1.5" PointX="13.5" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Klienci" Width="1.5" PointX="8.375" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.LogiSystemowe" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.ProduktyUslugi" Width="1.5" PointX="8.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Projekty" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.RelacjeMiedzyKlientami" Width="1.5" PointX="5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.RodzajePlatnosci" Width="1.5" PointX="8.25" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.StatusFaktury" Width="1.5" PointX="8.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Statusy" Width="1.5" PointX="0.75" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Szkolenia" Width="1.5" PointX="11.25" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Transakcje" Width="1.5" PointX="13.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.TypyInterakcji" Width="1.5" PointX="11.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Uzytkownicy" Width="1.5" PointX="13.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Zadania" Width="1.5" PointX="15.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Zamowienia" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.ZapytaniaKlientow" Width="1.5" PointX="10.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BazaCRMModel.Zespoly" Width="1.5" PointX="18" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="BazaCRMModel.FK_Faktury_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Faktury_ProduktyUslugi" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Faktury_RodzajePlatnosci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Faktury_StatusFaktury" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_InterakcjeKlientow_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_InterakcjeKlientow_TypyInterakcji" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Klienci_Projekty" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Klienci_Uzytkownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Projekty_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_RelacjeMiedzyKlientami_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_RelacjeMiedzyKlientami_Klienci1" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Transakcje_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Uzytkownicy_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_ZapytaniaKlientow_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Klienci" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zamowienia_ProduktyUslugi" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Projekty_Statusy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Projekty_Uzytkownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Projekty_Zespoly" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Uzytkownicy_Projekty" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Projekty" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Transakcje_Statusy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zadania_Statusy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zamowienia_Statusy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_ZapytaniaKlientow_Statusy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Uzytkownicy_Szkolenia" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Uzytkownicy_Zadania" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Uzytkownicy_Zespoly" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zadania_Uzytkownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Uzytkownicy" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Uzytkownicy1" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Uzytkownicy2" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Uzytkownicy3" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Uzytkownicy4" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zadania_Zespoly" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Zadania" ManuallyRouted="false" />
+        <AssociationConnector Association="BazaCRMModel.FK_Klienci_Zespoly" />
+        <AssociationConnector Association="BazaCRMModel.FK_Zespoly_Klienci1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
