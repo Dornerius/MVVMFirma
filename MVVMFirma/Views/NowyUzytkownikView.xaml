@@ -5,8 +5,128 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MVVMFirma.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="1000" d:DesignWidth="800">
+
     <Grid>
-            
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Dodaj Produkt" FontSize="24" FontWeight="Bold" Margin="4"/>            
+            <Grid Grid.Row="1" Background="AliceBlue" Margin="10,10,0,0">
+                <Border CornerRadius="5" BorderBrush="Black" BorderThickness="5" Height="Auto" Width="auto"/>
+                <Grid Margin="5">
+                    
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="220"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="0" Grid.Row="0" Content="Imie" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="0" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="1" Grid.Row="0" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj imie" Text="{Binding Path=Imie, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="0" Grid.Row="1" Content="Nazwisko" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="1" Grid.Row="1" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj nazwisko" Text="{Binding Path=Nazwisko, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="0" Grid.Row="2" Content="Email" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="2" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="1" Grid.Row="2" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj email" Text="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="0" Grid.Row="3" Content="Telefon" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="3" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="1" Grid.Row="3" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Podaj telefon" Text="{Binding Path=Telefon, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="3" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2" Height="110" Background="AliceBlue" Margin="10,10,0,0">
+                <Border CornerRadius="5" BorderBrush="Black" BorderThickness="5" Height="auto" Width="auto"/>
+                <Grid Margin="3">
+
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="220"/>                        
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Content="Klient" FontSize="15" FontWeight="Bold" Margin="0,3,0,0" HorizontalContentAlignment="Center"/>
+                    <Button Grid.Column="1" Grid.Row="0" Content="DODAJ" Background="#FF095B90" Foreground="white" FontSize="12" FontWeight="Bold" Width="80" Height="20" HorizontalAlignment="Left" Command="{Binding ShowKlienci}"/>
+                    <Border CornerRadius="3" Grid.Column="1" Grid.Row="0" BorderBrush="#FF095B90" BorderThickness="3" Width="82" Height="22" HorizontalAlignment="Left"/>
+
+
+                    <Label Grid.Column="0" Grid.Row="1" Content="Nazwa Firmy" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="1" Grid.Row="1" IsEnabled="False" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" Text="{Binding Path=KlienciNazwaFirmy, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="2" Grid.Row="1" Content="NIP" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="2" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="3" Grid.Row="1" IsEnabled="False" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" Text="{Binding Path=KlienciNip, UpdateSourceTrigger=PropertyChanged}" />
+                    <Border CornerRadius="5" Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+
+                    
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="3" Height="150" Background="AliceBlue" Margin="10,10,0,0">
+                <Border CornerRadius="5" BorderBrush="Black" BorderThickness="5" Height="auto" Width="auto"/>
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="220"/>
+                    </Grid.ColumnDefinitions>                    
+                    <Label Grid.Column="0" Grid.Row="0" Content="Projekt" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="0" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <ComboBox  Grid.Column="1" Grid.Row="0" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Wybierz rodzaj towaru" ItemsSource="{Binding ProjektyItems}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding IdProjektu, Mode=TwoWay}"/>
+                    <Border CornerRadius="5" Grid.Column="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="2" Grid.Row="0" Content="Zespół" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="2" Grid.Row="0" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <ComboBox  Grid.Column="3" Grid.Row="0" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Wybierz rodzaj towaru" ItemsSource="{Binding ZespolyItems}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding IdZespolu, Mode=TwoWay}"/>
+                    <Border CornerRadius="5" Grid.Column="3" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="0" Grid.Row="1" Content="Zadanie" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="0" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <ComboBox  Grid.Column="1" Grid.Row="1" Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" ToolTip="Wybierz rodzaj towaru" ItemsSource="{Binding ZadaniaItems}" DisplayMemberPath="Value" SelectedValuePath="Key" SelectedValue="{Binding IdZadania, Mode=TwoWay}"/>
+                    <Border CornerRadius="5" Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+                    <Label Grid.Column="2" Grid.Row="1" Content="Rola" Background="LightSeaGreen" FontSize="15" FontWeight="Bold" HorizontalContentAlignment="Center" Height="35" Width="115"/>
+                    <Border CornerRadius="5" Grid.Column="2" Grid.Row="1" BorderBrush="LightSeaGreen" BorderThickness="5" Height="39" Width="120"/>
+                    <TextBox  Grid.Column="3" Grid.Row="1"  Background="White" FontSize="15" Foreground="red" Height="35" Width="200" HorizontalAlignment="center"  VerticalContentAlignment="Center" Text="{Binding Path=Rola, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Border CornerRadius="5" Grid.Column="3" Grid.Row="1" BorderBrush="Black" BorderThickness="3"  Height="38" Width="204" HorizontalAlignment="Center" />
+
+
+                </Grid>
+            </Grid>
+
+
+
+        </Grid>
     </Grid>
 </local:JedenViewBase>

@@ -109,6 +109,10 @@ namespace MVVMFirma.ViewModels
                     new BaseCommand(() => this.ShowAllSzkolenia())),
 
                   new CommandViewModel(
+                    "Nowe szkolenie",
+                    new BaseCommand(() => this.CreateView(new NoweSzkolenieViewModel()))),
+
+                  new CommandViewModel(
                     "Transakcje",
                     new BaseCommand(() => this.ShowAllTransakcje())),
 
@@ -195,34 +199,50 @@ namespace MVVMFirma.ViewModels
 
         //private void CreateFaktura()
         //{
-        //   NowaFakturaViewModel workspace = new NowaFakturaViewModel();
+        //    NowaFakturaViewModel workspace = new NowaFakturaViewModel();
         //    this.Workspaces.Add(workspace);
         //    this.SetActiveWorkspace(workspace);
-        //} 
+        //}
 
         //private void CreateProduktUsluga()
         //{
         //    NowyProduktUslugaViewModel workspace = new NowyProduktUslugaViewModel();
         //    this.Workspaces.Add(workspace);
         //    this.SetActiveWorkspace(workspace);
+        //}
 
 
 
+        //private void ShowAllKlienci()
+        //{
+        //    if (!(this.Workspaces.FirstOrDefault(vm => vm is KlienciViewModel) is KlienciViewModel workspace))
+        //    {
+        //        workspace = new KlienciViewModel();
+        //        this.Workspaces.Add(workspace);
+        //    }
+
+        //    this.SetActiveWorkspace(workspace);
+
+        //}
         private void ShowAllKlienci()
         {
-            if (!(this.Workspaces.FirstOrDefault(vm => vm is KlienciViewModel) is KlienciViewModel workspace))
+            KlienciViewModel workspace =
+                this.Workspaces.FirstOrDefault(vm => vm is KlienciViewModel)
+                as KlienciViewModel;
+            if (workspace == null)
             {
                 workspace = new KlienciViewModel();
                 this.Workspaces.Add(workspace);
             }
 
             this.SetActiveWorkspace(workspace);
-
         }
 
-        private void ShowAllInterakcjeKlientow ()
+        private void ShowAllInterakcjeKlientow()
         {
-            if (!(this.Workspaces.FirstOrDefault(vm => vm is InterakcjeKlientowViewModel) is InterakcjeKlientowViewModel workspace))
+            InterakcjeKlientowViewModel workspace =
+            this.Workspaces.FirstOrDefault(vm => vm is InterakcjeKlientowViewModel)
+            as InterakcjeKlientowViewModel;
             {
                 workspace = new InterakcjeKlientowViewModel();
                 this.Workspaces.Add(workspace);
@@ -455,14 +475,21 @@ namespace MVVMFirma.ViewModels
             {
                 CreateView(new NowaFakturaViewModel());
             }
-            if (name == "UzytkownicyAdd")
+            if (name == "UżytkownicyAdd")
             {
                 CreateView(new NowyUzytkownikViewModel());
             }
-            if (name == "ProduktyUslugiAdd")
+            if (name == "Produkty i usługiAdd")
             {
                 CreateView(new NowyProduktUslugaViewModel());
             }
+
+            if (name == "SzkoleniaAdd")
+            {
+                CreateView(new NoweSzkolenieViewModel());
+            }
+
+
             if (name == "KlienciAll")
                 ShowAllKlienci();
             if (name == "UzytkownicyAll")

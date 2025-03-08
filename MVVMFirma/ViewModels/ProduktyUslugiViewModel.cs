@@ -11,7 +11,7 @@ namespace MVVMFirma.ViewModels
         #region Constructor
 
         public ProduktyUslugiViewModel()
-            :base("Produkty i uslugi")
+            :base("Produkty i usługi")
         {}
 
         #endregion

@@ -309,6 +309,7 @@
     <Compile Include="Models\BusinessLogic\StatusB.cs" />
     <Compile Include="Models\BusinessLogic\StatusFakturyB.cs" />
     <Compile Include="Models\BusinessLogic\UzytkownikB.cs" />
+    <Compile Include="Models\BusinessLogic\ZadaniaB.cs" />
     <Compile Include="Models\BusinessLogic\ZespolyB.cs" />
     <Compile Include="Models\Entities\BazaCRMModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -404,6 +405,7 @@
     <Compile Include="ViewModels\CommandViewModel.cs" />
     <Compile Include="ViewModels\InterakcjeKlientowViewModel.cs" />
     <Compile Include="ViewModels\JedenViewModel.cs" />
+    <Compile Include="ViewModels\NoweSzkolenieViewModel.cs" />
     <Compile Include="ViewModels\NowyProduktUslugaViewModel.cs" />
     <Compile Include="ViewModels\NowyProjektViewModel.cs" />
     <Compile Include="ViewModels\NowyUzytkownikViewModel.cs" />
@@ -448,6 +450,9 @@
     </Compile>
     <Compile Include="Views\NawaFakturaView.xaml.cs">
       <DependentUpon>NawaFakturaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NoweSzkolenieView.xaml.cs">
+      <DependentUpon>NoweSzkolenieView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\NowyKlientView.xaml.cs">
       <DependentUpon>NowyKlientView.xaml</DependentUpon>
@@ -570,6 +575,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\NawaFakturaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NoweSzkolenieView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

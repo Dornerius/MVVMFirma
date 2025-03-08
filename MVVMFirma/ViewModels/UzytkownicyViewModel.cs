@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace MVVMFirma.ViewModels
 {
-    public class UzytkownicyViewModel : WszystkieViewModel<UzytkownicyAllForView>
+    public class UzytkownicyViewModel : WszystkieViewModel <UzytkownicyAllForView>
     {
 
         #region Constructor

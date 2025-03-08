@@ -63,7 +63,11 @@
     <DataTemplate DataType="{x:Type vm:SzkoleniaViewModel}">
         <vw:SzkoleniaView/>
     </DataTemplate>
-    
+
+    <DataTemplate DataType="{x:Type vm:NoweSzkolenieViewModel}">
+        <vw:NoweSzkolenieView/>
+    </DataTemplate>
+
     <DataTemplate DataType="{x:Type vm:TransakcjeViewModel}">
         <vw:TransakcjeView/>
     </DataTemplate>

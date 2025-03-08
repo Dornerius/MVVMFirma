@@ -15,7 +15,7 @@ namespace MVVMFirma.ViewModels
         #region Constructor
 
         public SzkoleniaViewModel()
-            : base("Klienci")
+            : base("Szkolenia")
         { }
 
         #endregion
